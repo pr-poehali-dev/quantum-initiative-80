@@ -10,24 +10,32 @@ export default function Footer() {
             <div className="flex shrink-0 gap-8 sm:gap-12 lg:gap-20">
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Навигация</h3>
-                <a href="#sights" className="text-white hover:text-red-400 transition-colors duration-300 text-sm sm:text-base">Достопримечательности</a>
-                <a href="#hotels" className="text-white hover:text-red-400 transition-colors duration-300 text-sm sm:text-base">Отели</a>
-                <a href="#restaurants" className="text-white hover:text-red-400 transition-colors duration-300 text-sm sm:text-base">Рестораны</a>
-                <a href="#map" className="text-white hover:text-red-400 transition-colors duration-300 text-sm sm:text-base">Карта</a>
+                <a href="#sights" className="text-white hover:text-yellow-400 transition-colors duration-300 text-sm sm:text-base">Достопримечательности</a>
+                <a href="#hotels" className="text-white hover:text-yellow-400 transition-colors duration-300 text-sm sm:text-base">Отели</a>
+                <a href="#restaurants" className="text-white hover:text-yellow-400 transition-colors duration-300 text-sm sm:text-base">Рестораны</a>
+                <a href="#cars" className="text-white hover:text-yellow-400 transition-colors duration-300 text-sm sm:text-base">Автомобили</a>
+                <a href="#map" className="text-white hover:text-yellow-400 transition-colors duration-300 text-sm sm:text-base">Карта</a>
               </div>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Факты</h3>
-                <span className="text-neutral-400 text-sm">14 млн жителей</span>
-                <span className="text-neutral-400 text-sm">25 млн туристов/год</span>
-                <span className="text-neutral-400 text-sm">200+ звёзд Мишлен</span>
-                <span className="text-neutral-400 text-sm">Основан в 1457 г.</span>
+                <span className="text-neutral-400 text-sm">84 млн жителей</span>
+                <span className="text-neutral-400 text-sm">40 млн туристов/год</span>
+                <span className="text-neutral-400 text-sm">16 федеральных земель</span>
+                <span className="text-neutral-400 text-sm">Основана в 843 году</span>
+              </div>
+              <div className="flex flex-col gap-1 sm:gap-2">
+                <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Рейтинги</h3>
+                <span className="text-neutral-400 text-sm">#3 Lonely Planet</span>
+                <span className="text-neutral-400 text-sm">#4 TripAdvisor</span>
+                <span className="text-neutral-400 text-sm">#1 Автопром мира</span>
+                <span className="text-neutral-400 text-sm">#2 Экономика Европы</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
-              <h1 className="text-[18vw] sm:text-[16vw] lg:text-[14vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
-                東京
+              <h1 className="text-[14vw] sm:text-[12vw] lg:text-[10vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
+                GERMANY
               </h1>
-              <p className="text-neutral-400 text-sm sm:text-base">TOKYO · {new Date().getFullYear()}</p>
+              <p className="text-neutral-400 text-sm sm:text-base">DEUTSCHLAND · {new Date().getFullYear()}</p>
             </div>
           </div>
         </div>
