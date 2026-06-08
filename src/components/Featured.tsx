@@ -30,12 +30,54 @@ export default function Featured() {
   ];
 
   const cars = [
-    { brand: "Toyota", model: "GR Supra", origin: "Япония" },
-    { brand: "Nissan", model: "GT-R R35", origin: "Япония" },
-    { brand: "Honda", model: "NSX Type-S", origin: "Япония" },
-    { brand: "Lexus", model: "LFA", origin: "Япония" },
-    { brand: "Mazda", model: "RX-7 FD", origin: "Япония" },
-    { brand: "Mitsubishi", model: "Lancer Evo X", origin: "Япония" },
+    {
+      brand: "Toyota",
+      kanji: "トヨタ",
+      model: "GR Supra A90",
+      founded: "1937",
+      desc: "Крупнейший автопроизводитель мира. Легендарный Supra — икона дрифт-культуры и кино.",
+      color: "#EB0A1E",
+    },
+    {
+      brand: "Nissan",
+      kanji: "日産",
+      model: "GT-R R35",
+      founded: "1933",
+      desc: "«Годзилла» автомиров. GT-R R35 разгоняется до 100 км/ч за 2.7 сек при цене купе.",
+      color: "#C3002F",
+    },
+    {
+      brand: "Honda",
+      kanji: "ホンダ",
+      model: "NSX Type-S",
+      founded: "1948",
+      desc: "Инженерный перфекционизм. NSX — суперкар, которым управляли Айртон Сенна и Formula 1.",
+      color: "#CC0000",
+    },
+    {
+      brand: "Lexus",
+      kanji: "レクサス",
+      model: "LFA",
+      founded: "1989",
+      desc: "Люксовое подразделение Toyota. LFA с мотором V10 и звуком F1 — один из лучших суперкаров в истории.",
+      color: "#1A1A2E",
+    },
+    {
+      brand: "Mazda",
+      kanji: "マツダ",
+      model: "RX-7 FD3S",
+      founded: "1920",
+      desc: "Единственный серийный роторный двигатель. RX-7 — культ JDM-сцены и герой Initial D.",
+      color: "#1B3A6B",
+    },
+    {
+      brand: "Mitsubishi",
+      kanji: "三菱",
+      model: "Lancer Evolution X",
+      founded: "1917",
+      desc: "Четыре звезды — символ промышленной династии. Evo X — раллийная легенда с полным приводом.",
+      color: "#E60012",
+    },
   ];
 
   const fashionBrands = [
@@ -166,17 +208,44 @@ export default function Featured() {
       </div>
 
       {/* Автомобили */}
-      <div className="py-20 px-6 bg-neutral-100">
+      <div className="py-20 px-6 bg-neutral-950">
         <div className="max-w-6xl mx-auto">
-          <p className="text-red-500 uppercase tracking-widest text-xs mb-3 text-center">Автомобильная культура</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 text-center mb-4">Легенды японского автопрома</h2>
-          <p className="text-neutral-500 text-center mb-16 max-w-xl mx-auto">Токио — родина культовых суперкаров. JDM-культура, Дрифт, Токийский автосалон — всё началось здесь.</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <p className="text-red-500 uppercase tracking-widest text-xs mb-3 text-center">JDM культура</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">Легенды японского автопрома</h2>
+          <p className="text-neutral-400 text-center mb-16 max-w-xl mx-auto">
+            Токио — родина JDM-культуры. Токийский автосалон, дрифт-сцена Одайба, уличные гонки Вангу-ро — именно здесь рождались иконы.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {cars.map((c) => (
-              <div key={c.brand} className="bg-white p-4 text-center hover:shadow-lg transition-shadow duration-300 border border-neutral-200 group">
-                <div className="text-2xl font-black text-neutral-900 mb-1 group-hover:text-red-600 transition-colors">{c.brand}</div>
-                <div className="text-red-500 text-xs font-medium mb-1">{c.model}</div>
-                <div className="text-neutral-400 text-xs">{c.origin}</div>
+              <div
+                key={c.brand}
+                className="border border-neutral-800 p-6 hover:border-neutral-500 transition-all duration-300 group relative overflow-hidden"
+              >
+                <div
+                  className="absolute top-0 left-0 w-1 h-full transition-all duration-300 group-hover:w-2"
+                  style={{ backgroundColor: c.color }}
+                />
+                <div className="pl-4">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <div className="text-2xl font-black text-white group-hover:text-neutral-200 transition-colors tracking-wide">
+                        {c.brand}
+                      </div>
+                      <div className="text-neutral-500 text-sm tracking-widest">{c.kanji}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-neutral-500 text-xs">основан</div>
+                      <div className="text-neutral-300 font-bold text-sm">{c.founded}</div>
+                    </div>
+                  </div>
+                  <div
+                    className="text-xs uppercase tracking-widest font-bold mb-3 px-2 py-1 inline-block"
+                    style={{ color: c.color, border: `1px solid ${c.color}` }}
+                  >
+                    {c.model}
+                  </div>
+                  <p className="text-neutral-400 text-sm leading-relaxed">{c.desc}</p>
+                </div>
               </div>
             ))}
           </div>
