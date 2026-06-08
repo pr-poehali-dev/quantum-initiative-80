@@ -123,8 +123,11 @@ export default function Featured() {
           <h2 className="text-3xl lg:text-5xl mb-6 text-neutral-900 leading-tight font-bold">
             Страна, которая изменила ход истории
           </h2>
-          <p className="text-neutral-600 mb-6 leading-relaxed text-lg">
+          <p className="text-neutral-600 mb-4 leading-relaxed text-lg">
             Германия берёт начало с Восточно-Франкского королевства 843 года. Страна Гёте, Баха, Канта и Эйнштейна — родина идей, перевернувших цивилизацию.
+          </p>
+          <p className="text-neutral-600 mb-4 leading-relaxed">
+            Священная Римская империя, Реформация Лютера, объединение Бисмарка в 1871-м, Веймарская республика, Вторая мировая война и невероятное возрождение — немецкая история насыщена, как ни одна другая.
           </p>
           <p className="text-neutral-600 mb-8 leading-relaxed">
             Сегодня это крупнейшая экономика Европы: автобан без ограничений скорости, инженерные шедевры BMW и Porsche, романтические замки Баварии и живой Берлин — один из самых интересных городов планеты.
@@ -132,6 +135,78 @@ export default function Featured() {
           <a href="#sights" className="bg-black text-white border border-black px-6 py-3 text-sm transition-all duration-300 hover:bg-yellow-500 hover:text-black hover:border-yellow-500 cursor-pointer w-fit uppercase tracking-wide font-medium">
             Достопримечательности
           </a>
+        </div>
+      </div>
+
+      {/* Замок Нойшванштайн */}
+      <div className="bg-neutral-950 py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-yellow-400 uppercase tracking-widest text-xs mb-3 text-center">Бавария · 1886</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">Замок Нойшванштайн</h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-16">
+            <div className="h-[400px] lg:h-[600px] overflow-hidden">
+              <img
+                src="https://cdn.poehali.dev/projects/59c4b6e9-37c8-4b4b-ac8f-fc3b108a37b2/files/5237cde5-e268-4255-8f5a-4e84338b3e0f.jpg"
+                alt="Neuschwanstein Castle exterior"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div className="h-[400px] lg:h-[600px] overflow-hidden">
+              <img
+                src="https://cdn.poehali.dev/projects/59c4b6e9-37c8-4b4b-ac8f-fc3b108a37b2/files/8a41200f-ff82-432d-b740-21e02d84ca70.jpg"
+                alt="Neuschwanstein Castle interior"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+            <div className="md:col-span-2">
+              <h3 className="text-yellow-400 uppercase tracking-widest text-xs mb-4">История замка</h3>
+              <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+                Нойшванштайн — «Новый лебединый утёс» — был задуман баварским королём Людвигом II как воплощение мечты о средневековом рыцарском мире. Строительство началось в 1869 году, когда романтизм был в расцвете, а промышленная революция уже меняла облик Европы.
+              </p>
+              <p className="text-neutral-400 leading-relaxed mb-4">
+                Людвиг II был человеком не от мира сего: он избегал придворной жизни, обожал оперы Вагнера и тратил личное состояние на строительство грандиозных замков вместо того, чтобы управлять государством. Нойшванштайн стал его главным шедевром — замком, в котором король видел декорацию к операм любимого композитора.
+              </p>
+              <p className="text-neutral-400 leading-relaxed mb-4">
+                Интерьеры расписаны сценами из германских легенд: «Парсифаль», «Тангейзер», «Лоэнгрин». Тронный зал выполнен в неовизантийском стиле с мозаичным полом и золотыми куполами — но трон так и не был установлен при жизни Людвига.
+              </p>
+              <p className="text-neutral-400 leading-relaxed">
+                В 1886 году, всего за три дня до официального открытия, Людвига II признали психически больным и отстранили от власти. Через несколько дней он скончался при загадочных обстоятельствах. Замок открыли для туристов спустя 7 недель после его смерти — баварское правительство хотело окупить колоссальные долги. С тех пор Нойшванштайн посетили более 60 миллионов человек.
+              </p>
+            </div>
+            <div className="flex flex-col gap-6">
+              <div className="border border-neutral-800 p-5">
+                <div className="text-yellow-400 text-2xl font-black mb-1">1869</div>
+                <div className="text-neutral-400 text-sm">год начала строительства</div>
+              </div>
+              <div className="border border-neutral-800 p-5">
+                <div className="text-yellow-400 text-2xl font-black mb-1">17 лет</div>
+                <div className="text-neutral-400 text-sm">строительства, замок не был достроен</div>
+              </div>
+              <div className="border border-neutral-800 p-5">
+                <div className="text-yellow-400 text-2xl font-black mb-1">60 млн</div>
+                <div className="text-neutral-400 text-sm">туристов за всё время</div>
+              </div>
+              <div className="border border-neutral-800 p-5">
+                <div className="text-yellow-400 text-2xl font-black mb-1">1,4 млн</div>
+                <div className="text-neutral-400 text-sm">посетителей ежегодно</div>
+              </div>
+              <div className="border border-neutral-800 p-5">
+                <div className="text-yellow-400 text-2xl font-black mb-1">965 м</div>
+                <div className="text-neutral-400 text-sm">высота над уровнем моря</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border border-neutral-800 p-8">
+            <p className="text-neutral-400 text-xs uppercase tracking-widest mb-3">Интересный факт</p>
+            <p className="text-white text-xl leading-relaxed">
+              Именно замок Нойшванштайн вдохновил Уолта Диснея на создание замка Спящей красавицы в Диснейленде. Людвиг II мечтал о сказке — и сам стал её частью на века.
+            </p>
+          </div>
         </div>
       </div>
 
