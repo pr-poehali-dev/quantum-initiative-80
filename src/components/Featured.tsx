@@ -37,6 +37,7 @@ export default function Featured() {
       founded: "1937",
       desc: "Крупнейший автопроизводитель мира. Легендарный Supra — икона дрифт-культуры и кино.",
       color: "#EB0A1E",
+      img: "https://cdn.poehali.dev/projects/59c4b6e9-37c8-4b4b-ac8f-fc3b108a37b2/files/71fb3ea6-316e-48c0-98fd-cd9a99fba0fe.jpg",
     },
     {
       brand: "Nissan",
@@ -45,6 +46,7 @@ export default function Featured() {
       founded: "1933",
       desc: "«Годзилла» автомиров. GT-R R35 разгоняется до 100 км/ч за 2.7 сек при цене купе.",
       color: "#C3002F",
+      img: "https://cdn.poehali.dev/projects/59c4b6e9-37c8-4b4b-ac8f-fc3b108a37b2/files/8bb868e7-5692-48f9-ac8e-e26f226dbe05.jpg",
     },
     {
       brand: "Honda",
@@ -53,6 +55,7 @@ export default function Featured() {
       founded: "1948",
       desc: "Инженерный перфекционизм. NSX — суперкар, которым управляли Айртон Сенна и Formula 1.",
       color: "#CC0000",
+      img: "https://cdn.poehali.dev/projects/59c4b6e9-37c8-4b4b-ac8f-fc3b108a37b2/files/a4570151-3e57-441d-8775-ec0e76af87e7.jpg",
     },
     {
       brand: "Lexus",
@@ -60,7 +63,8 @@ export default function Featured() {
       model: "LFA",
       founded: "1989",
       desc: "Люксовое подразделение Toyota. LFA с мотором V10 и звуком F1 — один из лучших суперкаров в истории.",
-      color: "#1A1A2E",
+      color: "#8B8B8B",
+      img: "https://cdn.poehali.dev/projects/59c4b6e9-37c8-4b4b-ac8f-fc3b108a37b2/files/4afa03f6-7149-462f-8222-db95e2c675c5.jpg",
     },
     {
       brand: "Mazda",
@@ -68,7 +72,8 @@ export default function Featured() {
       model: "RX-7 FD3S",
       founded: "1920",
       desc: "Единственный серийный роторный двигатель. RX-7 — культ JDM-сцены и герой Initial D.",
-      color: "#1B3A6B",
+      color: "#D45A00",
+      img: "https://cdn.poehali.dev/projects/59c4b6e9-37c8-4b4b-ac8f-fc3b108a37b2/files/836e7285-c4b5-4089-b13d-0fa91d321da5.jpg",
     },
     {
       brand: "Mitsubishi",
@@ -76,7 +81,8 @@ export default function Featured() {
       model: "Lancer Evolution X",
       founded: "1917",
       desc: "Четыре звезды — символ промышленной династии. Evo X — раллийная легенда с полным приводом.",
-      color: "#E60012",
+      color: "#1B6BCC",
+      img: "https://cdn.poehali.dev/projects/59c4b6e9-37c8-4b4b-ac8f-fc3b108a37b2/files/736459f8-4e05-4873-b104-cc646b168930.jpg",
     },
   ];
 
@@ -219,18 +225,27 @@ export default function Featured() {
             {cars.map((c) => (
               <div
                 key={c.brand}
-                className="border border-neutral-800 p-6 hover:border-neutral-500 transition-all duration-300 group relative overflow-hidden"
+                className="border border-neutral-800 hover:border-neutral-500 transition-all duration-300 group overflow-hidden flex flex-col"
               >
-                <div
-                  className="absolute top-0 left-0 w-1 h-full transition-all duration-300 group-hover:w-2"
-                  style={{ backgroundColor: c.color }}
-                />
-                <div className="pl-4">
+                {/* Фото */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={c.img}
+                    alt={`${c.brand} ${c.model}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent" />
+                  <div
+                    className="absolute bottom-0 left-0 h-1 w-full"
+                    style={{ backgroundColor: c.color }}
+                  />
+                </div>
+
+                {/* Контент */}
+                <div className="p-6 flex flex-col flex-1">
                   <div className="flex justify-between items-start mb-3">
                     <div>
-                      <div className="text-2xl font-black text-white group-hover:text-neutral-200 transition-colors tracking-wide">
-                        {c.brand}
-                      </div>
+                      <div className="text-2xl font-black text-white tracking-wide">{c.brand}</div>
                       <div className="text-neutral-500 text-sm tracking-widest">{c.kanji}</div>
                     </div>
                     <div className="text-right">
@@ -239,12 +254,21 @@ export default function Featured() {
                     </div>
                   </div>
                   <div
-                    className="text-xs uppercase tracking-widest font-bold mb-3 px-2 py-1 inline-block"
+                    className="text-xs uppercase tracking-widest font-bold mb-3 px-2 py-1 inline-block w-fit"
                     style={{ color: c.color, border: `1px solid ${c.color}` }}
                   >
                     {c.model}
                   </div>
-                  <p className="text-neutral-400 text-sm leading-relaxed">{c.desc}</p>
+                  <p className="text-neutral-400 text-sm leading-relaxed mb-5 flex-1">{c.desc}</p>
+                  <a
+                    href={`https://www.google.com/search?q=${c.brand}+${c.model}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs uppercase tracking-widest font-bold py-2 px-4 text-center transition-all duration-300 hover:opacity-80"
+                    style={{ backgroundColor: c.color, color: "#fff" }}
+                  >
+                    Узнать больше
+                  </a>
                 </div>
               </div>
             ))}
